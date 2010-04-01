@@ -62,7 +62,14 @@ function getTimelineAll() {
 			"' timestamp='" +
 				tweet.created_at +
 			"' class='status ";
+            
+            //
+            //Titanium.API.debug(tweet.text + ' ' + props.getString('username'));
+            //var Pos = tweet.text.indexOf(props.getString('username'));
+            //Titanium.API.debug('position is ' + Pos);
+            
 				if (props.getBool('loggedIn') == true && props.getString('username') == tweet.user.screen_name) {text += "self";}
+                else if (props.getBool('loggedIn') == true && tweet.text.indexOf(props.getString('username')) > 0) {text += "reply";}
 				else if ((timelineCount-thisCount) % 2 == 0) {text += "even";}
 				else if ((timelineCount-thisCount) % 2 == 1) {text += "odd";}
 			text += "'><img src='" +
@@ -98,7 +105,8 @@ function getTimelineAll() {
 			//User detail view
 			Titanium.UI.createWindow({
 				url:'user.html',
-				barColor:'#423721',
+				//barColor:'#423721',
+                barColor:'#000000',
 			}).open();
 		});
 		//Message detail
@@ -108,7 +116,8 @@ function getTimelineAll() {
 			//Message detail view
 			Titanium.UI.createWindow({
 				url:'message.html',
-				barColor:'#423721',
+				//barColor:'#423721',
+                barColor:'#000000',
 			}).open();
 		});
 		//Links
@@ -125,7 +134,8 @@ function getTimelineAll() {
 			//User detail view
 			Titanium.UI.createWindow({
 				url:'user.html',
-				barColor:'#423721',
+				//barColor:'#423721',
+                barColor:'#000000',
 			}).open();
 			return false;
 		});
@@ -154,11 +164,12 @@ window.onload = function() {
 	Titanium.UI.currentWindow.setRightNavButton(refreshbutton);
 	
 	//Shake refresh event
-	Titanium.Gesture.addEventListener('shake',function(){
-		getTimelineAll();
-	});
+//	Titanium.Gesture.addEventListener('shake',function(){
+//		getTimelineAll();
+//	});
 	
-	setInterval("getTimelineAll()",60000);
+    // hrm, don't autorefresh this is a mobile app
+	//setInterval("getTimelineAll()",60000);
 	
 	Titanium.UI.currentWindow.addEventListener('focused',function(){
 		if (props.getBool('accountChangeAll') == true) {

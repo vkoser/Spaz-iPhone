@@ -44,10 +44,27 @@ img.centeredimg {
 }
 
 .status {
-	height:88px;
-	width:320px;
+	//height:88px;
+	height:99px;
+    width:320px;
 	background-repeat:repeat-x;
 }
+
+.odd {
+	background-color: #FFFFEE;
+	border-top-color: #000000;
+	background-image: url('images/entry-odd-bg.png');
+	background-repeat: repeat-x;
+    border:1px solid #000;
+}
+.even {
+	background-color: #EEEEFF;
+	border-top-color: #000000;
+	background-image: url('images/entry-even-bg.png');
+	background-repeat: repeat-x;
+    border:1px solid #000;
+}
+/*
 
 .even {
 	background-image:url('images/bg_dark_sliver.png');
@@ -56,17 +73,27 @@ img.centeredimg {
 .odd {
 	background-image:url('images/bg_light_sliver.png');
 }
-
+*/
 .self {
-	background-image:url('images/bg_red_sliver.png');
-}
+	background-color: #00FFFF;
+	border-top-color: #000000;
+	background-image: url('images/entry-selected-bg.png');
+	background-repeat: repeat-x;
+    border:1px solid #000;
 
+}
+.reply{
+		background-color: #EEEEAA;
+		background-image: none;
+}
 .usrimg {
 	margin-top:19px;
 	margin-left:10px;
 	height:48px;
 	width:48px;
-	border:1px solid #fff;
+    border:3px double #999999;
+    background-color:#FFFFFF;
+	//border:1px solid #000;
 	float:left;
 	overflow:hidden;
 }
@@ -77,7 +104,7 @@ img.centeredimg {
 	height:20px;
 	width:130px;
 	float:left;
-	color:#ffd200;
+	color:#2F2F64;
 	font-size:16px;
 	font-weight:bold;
 	overflow:hidden;
@@ -89,7 +116,7 @@ img.centeredimg {
 	height:14px;
 	width:50px;
 	float:right;
-	color:#d9bc86;
+	color:#FF9966;
 	font-size:13px;
 	font-style:italic;
 	text-align:right;
@@ -100,7 +127,7 @@ img.centeredimg {
 	height:48px;
 	width:235px;
 	float:left;
-	color:#fff;
+	color:#000;
 	font-size:13px;
 	overflow:hidden;
 	text-overflow:ellipsis;
@@ -111,7 +138,7 @@ img.centeredimg {
 	height:48px;
 	width:235px;
 	float:left;
-	color:#fff;
+	color:#000;
 	font-size:13px;
 	overflow:hidden;
 	text-overflow:ellipsis;
@@ -122,7 +149,7 @@ img.centeredimg {
 	height:64px;
 	width:235px;
 	float:left;
-	color:#fff;
+	color:#000;
 	font-size:13px;
 	overflow:hidden;
 	text-overflow:ellipsis;
@@ -133,8 +160,9 @@ img.centeredimg {
 	margin-left:27px;
 	height:14px;
 	width:235px;
-	color:#d9bc86;
-	float:left;
+	//color:#d9bc86;
+	color: #666666;
+    float:left;
 	font-size:12px;
 	font-style:italic;
 	overflow:hidden;
@@ -170,7 +198,7 @@ heavy {
 	height:48px;
 	width:110px;
 	float:left;
-	color:#fff;
+	color:#000;
 	font-size:13px;
 	font-weight:bold;
 }
@@ -196,11 +224,12 @@ hilite {
 }
 
 lnk {
-	color:#ffd200;
+	color:#666666;
+
 }
 
 usr {
-	color:#ffd200;
+	color:#333399;
 }
 
 
@@ -371,8 +400,11 @@ ctext {
 	left:0;
 	height:118px;
 	width:320px;
-	background-image:url('images/BG_dark_large.png');
-	background-repeat:repeat-x;
+	//background-image:url('images/BG_dark_large.png');
+	//background-repeat:repeat-x;
+    background-image: url('images/entry-odd-bg.png');
+	background-repeat: repeat-x;
+
 }
 
 .smallbutton_container {

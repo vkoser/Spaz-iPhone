@@ -181,7 +181,8 @@ window.onload = function() {
 			props.setInt('postMode',0);
 			Titanium.UI.createWindow({
 				url:'post.html',
-				barColor:'#423721',
+				//barColor:'#423721',
+                barColor:'#000000',
 				title:name,
 			}).open();
 		});
@@ -195,7 +196,8 @@ window.onload = function() {
 			props.setString('sendTo',id);
 			Titanium.UI.createWindow({
 				url:'post.html',
-				barColor:'#423721',
+				//barColor:'#423721',
+                barColor:'#000000',
 				title:props.getString('username'),
 			}).open();
 		});
@@ -208,7 +210,8 @@ window.onload = function() {
 		props.setInt('resultsMode',1);
 		Titanium.UI.createWindow({
 			url:'results.html',
-			barColor:'#423721',
+			//barColor:'#423721',
+                barColor:'#000000',
 		}).open();
 	});
 	
@@ -219,8 +222,9 @@ window.onload = function() {
 		props.setInt('resultsMode',0);
 		Titanium.UI.createWindow({
 			url:'results.html',
-			barColor:'#423721',
-		}).open();
+			//barColor:'#423721',
+                barColor:'#000000',
+                		}).open();
 	});
 
 };

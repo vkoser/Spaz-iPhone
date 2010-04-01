@@ -169,7 +169,8 @@ function editAccounts() {
 		props.setInt('accountMode',0);
 		Titanium.UI.createWindow({
 			url:'newaccount.html',
-			barColor:'#423721',
+			//barColor:'#423721',
+            barColor:'#000000',
 		}).open();
 	});
 
@@ -179,7 +180,8 @@ function editAccounts() {
 			props.setInt('accountMode',0);
 			Titanium.UI.createWindow({
 				url:'newaccount.html',
-				barColor:'#423721',
+				//barColor:'#423721',
+            barColor:'#000000',
 			}).open();
 		}
 		else {
@@ -187,7 +189,8 @@ function editAccounts() {
 			props.setString('accName',$(this).children(".label").text());
 			Titanium.UI.createWindow({
 				url:'newaccount.html',
-				barColor:'#423721',
+				//barColor:'#423721',
+            barColor:'#000000',
 			}).open();
 		}
 	});

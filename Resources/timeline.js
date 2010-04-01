@@ -87,7 +87,8 @@ window.onload = function() {
 		// Stack accounts screen on top of timeline window
 		Titanium.UI.createWindow({
 			url:'accounts.html',
-			barColor:'#423721',
+			//barColor:'#423721',
+                barColor:'#000000',
 		}).open({animated:false});
 
 		// Stack splash screen on top of accounts window (initial window)
@@ -101,7 +102,8 @@ window.onload = function() {
 		// Stack accounts screen on top of timeline window
 		Titanium.UI.createWindow({
 			url:'accounts.html',
-			barColor:'#423721',
+			//barColor:'#423721',
+                barColor:'#000000',
 		}).open({animated:false});
 	}
 	else if (initialState == 2) {
@@ -124,7 +126,8 @@ window.onload = function() {
 	accountbutton.addEventListener('click', function(e) {
 		Titanium.UI.createWindow({
 			url:'accounts.html',
-			barColor:'#423721',
+			//barColor:'#423721',
+                barColor:'#000000',
 		}).open();
 	});
 	Titanium.UI.currentWindow.setLeftNavButton(accountbutton);
@@ -134,7 +137,8 @@ window.onload = function() {
 		var tabbar = Titanium.UI.createTabbedBar({
 			index:props.getInt('inboxMode'),
 			labels:['All','Replies','DM\'s'],
-			backgroundColor:'#423721'
+			//backgroundColor:'#423721'
+               backgroundColor:'#000000'
 		});
 		tabbar.addEventListener('click',function(e){
 			props.setInt('inboxMode',e.index);
@@ -152,7 +156,8 @@ window.onload = function() {
 			props.setString('postMode',0);
 			Titanium.UI.createWindow({
 				url:'post.html',
-				barColor:'#423721',
+				//barColor:'#423721',
+                barColor:'#000000',
 				title:props.getString('username'),
 			}).open();
 		});
